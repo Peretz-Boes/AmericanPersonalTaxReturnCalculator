@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.android.americanpersonaltaxreturncalculator.MainActivity"
+    tools:showIn="@layout/activity_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This is not a substitute for an offical tax return. Make sure to file an official tax return" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select the filing status that applies."/>
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="single"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A single person"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A married couple filing together"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A married couple filing separately"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A head of a household(with a qualifying person)"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="If the qualifying person is a child but not a dependent enter the child's name"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A qualifying widow or a qualifying widower with a dependent child"/>
+        </RadioGroup>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check the exemptions that apply"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The person filing the tax return. If somebody can claim the person filing the tax return as a dependent do not check this box."
+            android:id="@+id/person_filing_check_box"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The spouse of the person filing the tax return"
+            android:id="@+id/spouse_check_box"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter the dependents of the person filing the tax return"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="If there are more than four dependents, check this box"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter the number of children listed who lived with the taxpayer"
+            android:id="@+id/children_who_lived_with_taxpayer_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter the number of children who did not live with the taxpayer due to divorce or separation"
+            android:id="@+id/children_who_did_not_live_with_taxpayer_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/unlisted_dependents_edit_text"
+            android:hint="Enter the number of dependents not already listed"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Section One: Income"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter tips, salaries wages etc. earned"
+            android:id="@+id/tips_salaries_wages_etc._edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter taxable interest"
+            android:id="@+id/taxable_interest_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter tax-exempt interest"
+            android:id="@+id/tax_exempt_interest_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter ordinary dividends"
+            android:id="@+id/ordinary_dividends_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter qualified dividends"
+            android:id="@+id/qualified_dividends_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter offsets of state and local income taxes credits and taxable refunds"
+            android:id="@+id/offsets_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter alimony received"
+            android:id="@+id/alimony_received_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter buisness income or loss"
+            android:id="@+id/buisness_income_or_loss_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter capital gain or loss"
+            android:id="@+id/capital_gain_or_loss_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter other gains or losses"
+            android:id="@+id/other_gains_or_losses_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter IRA distributions"
+            android:id="@+id/IRA_distributions_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter the taxable amount of IRA distributions"
+            android:id="@+id/taxable_amount_of_IRA_distributions_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter the amount of annuities and pensions"
+            android:id="@+id/annuities_and_pensions_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter the taxable amount of annuities and pensions"
+            android:id="@+id/taxable_amount_of_annunites_and_pensions_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter income from S corporations, trusts, partnerships, royalties and rental real estate"
+            android:id="@+id/income_from_S_corporations..._edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter farm income or loss"
+            android:id="@+id/farm_income_or_loss_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter unemployment compensation"
+            android:id="@+id/unemployment_compensation_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter social security benefits"
+            android:id="@+id/social_security_benifits_text_view"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter the taxable amounts of social security benifits"
+            android:id="@+id/taxable_amount_of_social_security_benifits_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter other income"
+            android:id="@+id/other_income_edit_text"/>
+        <TextView
+            android:id="@+id/income_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Section Two: Adjusted Gross Income "/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter educator expenses"
+            android:id="@+id/educator_expenses_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter certain buisness expenses of fee-basis government officials, performing artists and reservists"
+            android:id="@+id/certain_buisness_expenses_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter health savings account deduction"
+            android:id="@+id/health_savings_account_deduction"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter moving expenses"
+            android:id="@+id/moving_expenses_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter deductible part of self-employment tax"
+            android:id="@+id/deductible_part_of_self_employment_tax_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter SIMPLE,self-employed SEP and qualified plans"
+            android:id="@+id/plans_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter self-employed health insurance deduction"
+            android:id="@+id/self_employed_health_insurance_deduction_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter penalty on early withdrawal of savings"
+            android:id="@+id/savings_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter alimony paid"
+            android:id="@+id/alimony_paid_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter IRA deduction"
+            android:id="@+id/IRA_deduction_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter student loan interest deduction"
+            android:id="@+id/student_loan_interest_deduction_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter tuiton and fees"
+            android:id="@+id/tuiton_and_fees_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter domestic production activities deduction"
+            android:id="@+id/domestic_production_activities_deduction_edit_text"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/adjusted_gross_income_text_view"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Section Three: Tax and Credits"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check this box if the person filing the tax return was born before a certain day"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check this box if the person filing the tax return is blind"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check this box if the spouse of the person filing the tax return was born before a certain day"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check this box if the spouse of the person filing the tax return is blind"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check this box if the person filing the tax return is a dual-status alien or if the spouse of the person filing the tax return itemizes on a separate tax return"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter itemized deductions"
+            android:id="@+id/itemized_deductions_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter exemptions"
+            android:id="@+id/exemptions_edit_text"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check this box if any tax from form(s) 8814"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check this box if any tax from form 4972"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check this box if any tax from another form"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter codes"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter amounts"
+            android:id="@+id/tax_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter alternative minimum tax"
+            android:id="@+id/alternative_minimum_tax_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter advance premium tax credit repayment"
+            android:id="@+id/advance_premium_tax_credit_repayment_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter foreign tax credit"
+            android:id="@+id/foreign_tax_credit_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter credit for dependent and child care expenses"
+            android:id="@+id/credit_for_dependent_and_child_care_expenses_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter education credits from form 8863 line 19"
+            android:id="@+id/education_credits_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter retirement savings contribution credit"
+            android:id="@+id/retirement_savings_contribution_credit_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter child tax credit"
+            android:id="@+id/child_tax_credit_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter residential energy credits"
+            android:id="@+id/residential_energy_credits_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter other credits from"
+            android:id="@+id/other_credits_edit_text"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Form 3800"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Form 8801"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From other forms"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter codes"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/tax_and_credits_text_view"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Section Four: Other Taxes"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter self-employment tax"
+            android:id="@+id/self_employment_tax_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter unreported Medicare and social security tax"
+            android:id="@+id/medicare_and_social_security_tax_edit_text"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From Form 4137"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From Form 8919"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter additional taxes on IRAs, other qualified retirement plans etc."
+            android:id="@+id/additional_taxes_on_IRAs_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter household employment taxes from Schedule H"
+            android:id="@+id/household_employment_taxes_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter first time homebuyer credit repayment"
+            android:id="@+id/first_time_homebuyer_credit_repayment_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter health care individual responsibility"
+            android:id="@+id/health_care_individual_responsibility_edit_text"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Full-year coverage"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter taxes from:"
+            android:id="@+id/taxes_from_edit_text"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Form 8959"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Form 8960"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Instructions"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter codes"
+            android:id="@+id/codes_edit_text"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/total_tax_text_view"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Section Five: Payments"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter federal income tax withheld from forms 1099 and W-2"
+            android:id="@+id/federal_income_tax_withheld_from_forms_1099_and_W_2_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter estimated tax payments and amount applied from last year's return"
+            android:id="@+id/estimated_tax_payments_and_amount_applied_from_return_of_the_previous_year_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter earned income credit"
+            android:id="@+id/earned_income_credit_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter non-taxable combat pay election"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter additional child tax credit"
+            android:id="@+id/additional_child_tax_credit_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter American opportunity credit from form 8863 line 8"
+            android:id="@+id/American_opportunity_credit_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter net premium tax credit"
+            android:id="@+id/net_premium_tax_credit_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter amount paid with request for an extension to file"
+            android:id="@+id/extension_to_file_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter excess social security and tier 1 RRTA tax withheld"
+            android:id="@+id/social_security_and_tier_1_RRTA_tax_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter credit for federal tax on fuels"
+            android:id="@+id/federal_tax_on_fuels_edit_text"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter credits from form:"
+            android:id="@+id/credits_from_form_edit_text"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2439"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reserved"
+            android:enabled="false"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8885"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Other"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter codes"
+            android:id="@+id/codes2_edit_text"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/payments_text_view"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/overpayment_text_view"
+            android:text=""/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/amount_owed_text_view"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculate Taxes"
+            android:onClick="calculateTaxes"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+</ScrollView>
